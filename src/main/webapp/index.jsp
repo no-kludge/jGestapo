@@ -6,10 +6,10 @@
 <head>
 <title>Service Flow Visualizer</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<link rel="stylesheet" href="resources/core/css/jquery-ui.min.css">
-	<script type="text/javascript" src="resources/core/js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="resources/core/js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="resources/core/js/fabric.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.5.0/fabric.min.js"></script>
 	<script>
 		
 		// Global Variables and Data Structures
@@ -52,9 +52,9 @@
 		}
 		
 		var draw = function() {
-			
+			alert("Inside draw");
 			$.ajax({
-				url : "/serviceflowvisualizer/getData"
+				url : "/ServiceFlowVisualizer/getData"
 			}).done(function(data) {
 				canvas = new fabric.Canvas('c');
 			    canvas.backgroundColor="#999966";

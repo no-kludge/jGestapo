@@ -24,7 +24,7 @@ public class DataDAOImpl implements DataDAO {
 	public List<Data> getData() {
 		String SQL = "select * from seq_viz.data where invocation_id = (Select Max(invocation_id) from seq_viz.data)";
 		
-		String infoSQL = "select distinct service, class from seq_viz.data order by seq_no";
+		String infoSQL = "select distinct seq_no, service, class from seq_viz.data order by seq_no";
 		
 		List<InfoData> infoData = jdbcTemplateObject.query(infoSQL, new RowMapper<InfoData>() {
 
